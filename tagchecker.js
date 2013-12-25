@@ -1,8 +1,8 @@
 /*
  * tagcheck.js
- * ѓ^ѓO‚М‘О‰ћѓGѓ‰Ѓ[‚рѓ`ѓFѓbѓN‚µЃAЊ‹‰КѓEѓBѓ“ѓhѓE‚Й•\Ћ¦‚·‚й
+ * г‚їг‚°гЃ®еЇѕеїњг‚Ёгѓ©гѓјг‚’гѓЃг‚§гѓѓг‚ЇгЃ—гЂЃзµђжћњг‚¦г‚Јгѓігѓ‰г‚¦гЃ«иЎЁз¤єгЃ™г‚‹
  * @author tockri
- * ‰ь•ПЃAЌД”z•zЃAЏ”ЃXЋ©—R‚Й‚в‚Б‚Д‚­‚ѕ‚і‚ў
+ * ж”№е¤‰гЂЃе†Ќй…ЌеёѓгЂЃи«ёгЂ…и‡Єз”±гЃ«г‚„гЃЈгЃ¦гЃЏгЃ гЃ•гЃ„
  */
 (function(w) {
 	// remove inplanted script tag
@@ -50,11 +50,11 @@
 			'<div id="loading">now computing...',
 			'</div>',
 			'<div id="resultarea" class="none">',
-			'<h1>ѓ`ѓFѓbѓNЊ‹‰КЉT—v</h1>',
+			'<h1>гѓЃг‚§гѓѓг‚Їзµђжћњж¦‚и¦Ѓ</h1>',
 			'<div id="summary"></div>',
-			'<h1>ѓ^ѓO‘О‰ћѓGѓ‰Ѓ[€к——</h1>',
+			'<h1>г‚їг‚°еЇѕеїњг‚Ёгѓ©гѓјдёЂи¦§</h1>',
 			'<div id="list"></div>',
-			'<h1>HTMLѓ\Ѓ[ѓX</h1>',
+			'<h1>HTMLг‚Ѕгѓјг‚№</h1>',
 			'<div id="source"></div>',
 			'<div id="debug"></div>',
 			'</div>',
@@ -85,9 +85,9 @@
 			(function() {
 				var sdiv = $('summary');
 				var message = (
-					errorCount == 0 ? '‘fђ°‚з‚µ‚ўЃI‚Ж‚и‚ ‚¦‚ёѓ^ѓO‚М‘О‰ћ‚ѕ‚Ї‚НЉ®аш‚Е‚·ЃI'
-					: errorCount == 1 ? 'ђЙ‚µ‚ўЃI1ЊВ‚ѕ‚Ї‚«‚ї‚с‚Ж‘О‰ћ‚µ‚Д‚ў‚И‚ўѓ^ѓO‚Є‚ ‚и‚Ь‚·ЃB'
-					: 'Ћc”OЃA' + errorCount + 'ЊВ‚Мѓ^ѓO‚Є‚«‚ї‚с‚Ж‘О‰ћ‚µ‚Д‚ў‚Ь‚№‚сЃB'
+					errorCount == 0 ? 'зґ ж™ґг‚‰гЃ—гЃ„пјЃгЃЁг‚ЉгЃ‚гЃ€гЃљг‚їг‚°гЃ®еЇѕеїњгЃ гЃ‘гЃЇе®Њз’§гЃ§гЃ™пјЃ'
+					: errorCount == 1 ? 'жѓњгЃ—гЃ„пјЃ1еЂ‹гЃ гЃ‘гЃЌгЃЎг‚“гЃЁеЇѕеїњгЃ—гЃ¦гЃ„гЃЄгЃ„г‚їг‚°гЃЊгЃ‚г‚ЉгЃѕгЃ™гЂ‚'
+					: 'ж®‹еїµгЂЃ' + errorCount + 'еЂ‹гЃ®г‚їг‚°гЃЊгЃЌгЃЎг‚“гЃЁеЇѕеїњгЃ—гЃ¦гЃ„гЃѕгЃ›г‚“гЂ‚'
 				);
 				sdiv.innerHTML = message;
 				sdiv.className = errorCount ? 'fail' : 'success';
@@ -154,7 +154,7 @@
 				for (var i = 0, l = errors.length; i < l; i++) {
 					var uc = errors[i];
 					listHTML.push('<li>',
-							'(' + uc.lineNumber + 'Ќs–Ъ) ',
+							'(' + uc.lineNumber + 'иЎЊз›®) ',
 							'<a id="d' + uc.id + '"',
 							' href="javascript:go(\'a' + uc.id + '\');">&lt;',
 							uc.tagName + uc.attr,
@@ -208,7 +208,7 @@
 	var debug = [];
 	var ignoring = [];
 
-	// ‚»‚а‚»‚а‹у—v‘f‚Мѓ^ѓO
+	// гЃќг‚‚гЃќг‚‚з©єи¦Ѓзґ гЃ®г‚їг‚°
 	var EMPTYTAG = ['img', 'link', 'meta', 'br', 'hr', 'input', 
 				'embed', 'area', 'base', 'basefont', 'bgsound',
 				'param', 'wbr', 'col'];
@@ -221,7 +221,7 @@
 		return -1;
 	};
 	
-	// –іЋ‹ѓ]Ѓ[ѓ“‚рЊџЌх‚·‚й
+	// з„Ўи¦–г‚ѕгѓјгѓіг‚’ж¤њзґўгЃ™г‚‹
 	(function() {
 		var ignorePattern = /(<script[^>]*>[\s\S]*?<\/script>)|(<\!--[\s\S]*?-->)/igm;
 		var found = null;
@@ -249,9 +249,9 @@
 	}
 
 	
-	// ЉJ‚ў‚Ѕ‚Ь‚Ь•В‚¶‚Д‚ў‚И‚ўѓ^ѓO‚рЊџЌх‚·‚й
+	// й–‹гЃ„гЃџгЃѕгЃѕй–‰гЃгЃ¦гЃ„гЃЄгЃ„г‚їг‚°г‚’ж¤њзґўгЃ™г‚‹
 	(function() {
-		// •В‚¶ѓ^ѓO‚МЉJЋn€К’u‚р•Ф‚·
+		// й–‰гЃг‚їг‚°гЃ®й–‹е§‹дЅЌзЅ®г‚’иї”гЃ™
 		var closure = function(html, index, tagName) {
 			var closeRe = new RegExp("<(/)?" + tagName + "( [^>]*)?>", "igm");
 			closeRe.lastIndex = index;
@@ -260,7 +260,7 @@
 			while (r = closeRe.exec(html)) {
 				if (r[1] == '/') {
 					if (--depth == 0) {
-						// ‚·‚Е‚Й‘ј‚М•В‚¶ѓ^ѓO‚Й‚И‚Б‚Д‚йЏкЌ‡‚Нfalse
+						// гЃ™гЃ§гЃ«д»–гЃ®й–‰гЃг‚їг‚°гЃ«гЃЄгЃЈгЃ¦г‚‹е ґеђ€гЃЇfalse
 						return closed[r.index] ? false : {
 							head:r.index,
 							tail:r.index + r[0].length
@@ -284,7 +284,7 @@
 			var attr = found[2];
 				
 			if (EMPTYTAG.indexOf(tagName) >= 0 || (attr && attr.charAt(attr.length - 1) == '/')) {
-				// ‹у—v‘fѓ^ѓO
+				// з©єи¦Ѓзґ г‚їг‚°
 				closed[head] = {
 					open: head, 
 					openTail: tail,
@@ -311,7 +311,7 @@
 						tail:tail, 
 						tagName: tagName, 
 						attr: attr, 
-						message: "ѓ^ѓO‚Є•В‚¶‚Д‚ў‚Ь‚№‚с"
+						message: "г‚їг‚°гЃЊй–‰гЃгЃ¦гЃ„гЃѕгЃ›г‚“"
 					});
 				}
 			}
@@ -319,7 +319,7 @@
 		}
 	})();
 	
-	// ЉJ‚«ѓ^ѓO‚Є‚И‚ў•В‚¶ѓ^ѓO‚рЊџЌх‚·‚й
+	// й–‹гЃЌг‚їг‚°гЃЊгЃЄгЃ„й–‰гЃг‚їг‚°г‚’ж¤њзґўгЃ™г‚‹
 	(function() {
 		var closePattern = /<\/([a-zA-Z1-9:]+)>/gm;
 		var found = null;
@@ -339,7 +339,7 @@
 						tail:tail,
 						tagName: '/' + tagName,
 						attr: attr,
-						message: "ЉJ‚«ѓ^ѓO‚Є‚ ‚и‚Ь‚№‚с"
+						message: "й–‹гЃЌг‚їг‚°гЃЊгЃ‚г‚ЉгЃѕгЃ›г‚“"
 					});
 				}
 			}
@@ -347,7 +347,7 @@
 		}
 	})();
 	
-	// ђж‚ЙЉJ‚ў‚Ѕѓ^ѓO‚Єђж‚Й•В‚¶‚Д‚ў‚й‚ж‚¤‚И‰УЏЉ‚Є‚И‚ў‚©ѓ`ѓFѓbѓN‚·‚й
+	// е…€гЃ«й–‹гЃ„гЃџг‚їг‚°гЃЊе…€гЃ«й–‰гЃгЃ¦гЃ„г‚‹г‚€гЃ†гЃЄз®‡ж‰ЂгЃЊгЃЄгЃ„гЃ‹гѓЃг‚§гѓѓг‚ЇгЃ™г‚‹
 	(function() {
 		var checked = [];
 		for (var i in opened) {
@@ -357,14 +357,14 @@
 				if (ch.open < cl.open 
 					&& cl.open < ch.close 
 					&& ch.close < cl.close) {
-					// ђeЉJ‚­-ЋqЉJ‚­-ђe•В‚¶‚й-Ћq•В‚¶‚й‚МЏ‡
+					// и¦Єй–‹гЃЏ-е­ђй–‹гЃЏ-и¦Єй–‰гЃг‚‹-е­ђй–‰гЃг‚‹гЃ®й †
 					errors.push({
 						id: errors.length,
 						head: ch.close,
 						tail: ch.closeTail,
 						tagName: '/' + ch.tagName,
 						attr: '',
-						message: '&lt;' + cl.tagName + cl.attr + '&gt;‚ж‚и‚ађж‚Й•В‚¶‚Д‚µ‚Ь‚Б‚Д‚ў‚Ь‚·'
+						message: '&lt;' + cl.tagName + cl.attr + '&gt;г‚€г‚Љг‚‚е…€гЃ«й–‰гЃгЃ¦гЃ—гЃѕгЃЈгЃ¦гЃ„гЃѕгЃ™'
 					});
 					errors.push({
 						id: errors.length,
@@ -372,10 +372,10 @@
 						tail: cl.closeTail,
 						tagName: '/' + cl.tagName,
 						attr: '',
-						message: '&lt;' + ch.tagName + ch.attr + '&gt;‚ж‚и‚аЊг‚Е•В‚¶‚Д‚µ‚Ь‚Б‚Д‚ў‚Ь‚·'
+						message: '&lt;' + ch.tagName + ch.attr + '&gt;г‚€г‚Љг‚‚еѕЊгЃ§й–‰гЃгЃ¦гЃ—гЃѕгЃЈгЃ¦гЃ„гЃѕгЃ™'
 					});
 				} else if (ch.close < cl.open) {
-					// ’Ќ–Ъ‚µ‚Д‚ў‚й’n“_‚Е‚·‚Е‚Й•В‚¶‚Д‚й‚М‚Нѓ`ѓFѓbѓN‚©‚зЉO‚·
+					// жіЁз›®гЃ—гЃ¦гЃ„г‚‹ењ°з‚№гЃ§гЃ™гЃ§гЃ«й–‰гЃгЃ¦г‚‹гЃ®гЃЇгѓЃг‚§гѓѓг‚ЇгЃ‹г‚‰е¤–гЃ™
 					checked.splice(j, 1);
 				}
 			}
