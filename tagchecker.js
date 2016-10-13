@@ -211,7 +211,8 @@
 	// そもそも空要素のタグ
 	var EMPTYTAG = ['img', 'link', 'meta', 'br', 'hr', 'input', 
 				'embed', 'area', 'base', 'basefont', 'bgsound',
-				'param', 'wbr', 'col'];
+				'param', 'wbr', 'col', 'source', 'track', 'command',
+				'keygen'];
 	EMPTYTAG.indexOf = EMPTYTAG.indexOf || function(str) {
 		for (var i = 0, l = this.length; i < l; i++) {
 			if (this[i] == str) {
